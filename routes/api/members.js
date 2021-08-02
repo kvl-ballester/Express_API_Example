@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const uuid = require('uuid ')
 const members = require('../../members')
 
 
@@ -19,6 +20,15 @@ router.get('/:id',(req,res) => {
         res.json(memberRes)
     } else {
         res.status(400).json({msg:'member not found'})
+    }
+})
+
+//Create member
+router.post('/',(req,res) => {
+    res.send(req.body)
+
+    const newMember = {
+
     }
 })
 
